@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+
+<div style="height:800px; overflow:auto;">
+	<ul class="list-group">
+		<li class="list-group-item" ng-repeat = "item in items">
+			<item-card item="item"></item-card>
+			<button ng-click="items.splice($index,1)" class="btn btn-danger">hide</button>
+		</li>
+	</ul>
+</div>
