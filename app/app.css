@@ -29,3 +29,21 @@
   padding: 0;
 }
 
+.temp {
+  margin:10px;
+}
+
+.enter_city {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.enter_city > input {
+  padding: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.city_name {
+  text-transform: uppercase;
+}

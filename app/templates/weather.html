@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="input enter_city">				
+	    <input type="text" ng-model="city" autofocus placeholder="Enter city">
+	</div>
+
+	<div class = "row">
+		<section class="forecast">
+		    <div ng-repeat-start="day in forecast" ng-if="$first" ng-show="city">
+		    	<h1 ng-show="city">Weather in: <br> <span class="city_name">{{city}}, {{loc.city.country}}</span></h1>
+		    </div>
+			<div ng-repeat-end ng-show="city" ng-if="!first">
+		      <div class= "col-lg-3 well temp">
+				    <h4>
+				    	<div>{{day.dt *1000 | date: 'EEEE'}}</div>
+			        </h4>
+			        	<div class="badge">{{day.temp.day *(9/5)+32 | number: 1}}°F</div>
+				       	<br>{{day.weather[0].main}}
+				        <span><br>{{day.speed * 0.621371 | number: 2}} mph</span>
+			    </div>  
+		    </div>
+		</section>
+	</div>
+</div>
+
+  
+  
